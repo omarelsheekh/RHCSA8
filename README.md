@@ -8,6 +8,7 @@ The Red Hat Certified System Administrator (RHCSA), 3rd edition is all new and f
 #### [Download 2.6GB](https://1337x.to/torrent/4315827/RHCSA-8-Red-Hat-Certified-System-Administrator-3rd-Edition-by-Sander-van-Vugt/) -->
 ## Index
 - [lesson 2](#lesson2): Getting Started with Linux Commands
+- [lesson 3](#lesson3): Essential File Management Tasks 
 ## <a name="lesson2"> Lesson 2
 Getting Started with Linux Commands  
 ![lesson 2 task](./lesson2.png)
@@ -43,3 +44,18 @@ Getting Started with Linux Commands
     - `/text` search for text forword
     - `?text` search for text backword
     - `:%s/old/new` for replacing text
+## <a name="lesson3"> Lesson 3
+Essential File Management Tasks 
+![lesson 3 task](./lesson3.png)
+1.  - `mkdir -p /tmp/files/pictures`
+    - `mkdir -p /tmp/files/photos`
+    - `mkdir -p /tmp/files/videos`
+2.  - `cp /etc/[a-c]* /tmp/files/`
+3.  - `mv /tmp/files/[a-b]* /tmp/files/photos/`
+    - `mv /tmp/files/c* /tmp/files/videos/`
+4.  - `find /etc/ -size -1000c -exec cp {} /tmp/files/pictures`
+5.  - `ln -s /var/ /tmp/files/varlink`
+6.  - `tar -cvJf /tmp/files/home.tar.xz /home`
+    - `-J` for .xz compressing
+7.  - `mkdir /tmp/arch/ ; tar -xvf /tmp/files/home.tar.xz -C /tmp/arch/`
+    - note that we can use `Ctrl + a` to goto the start of the command line, and we can seperate commands using `;`
