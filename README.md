@@ -10,6 +10,7 @@ The Red Hat Certified System Administrator (RHCSA), 3rd edition is all new and f
 - [lesson 2](#lesson2): Getting Started with Linux Commands
 - [lesson 3](#lesson3): Essential File Management Tasks 
 - [lesson 4](#lesson4): Working with Text Files
+- [lesson 5](#lesson5): Connecting to a RHEL Server
 ## <a name="lesson2"> Lesson 2
 Getting Started with Linux Commands  
 ![lesson 2 task](./lesson2.png)
@@ -33,7 +34,7 @@ Getting Started with Linux Commands
     - `:q!` quite and don't complain
     - `dd` delete a line
     - `yy` copy the current line
-    - `p` past
+    - `p` paste
     - `G`  goto the last line in the file
     - `gg` goto the beggining of the file
     - `d$` delete after cursor in line
@@ -57,7 +58,7 @@ Essential File Management Tasks
 4.  - `find /etc/ -size -1000c -exec cp {} /tmp/files/pictures`
 5.  - `ln -s /var/ /tmp/files/varlink`
 6.  - `tar -cvJf /tmp/files/home.tar.xz /home`
-    - `-J` for .xz compressing
+    - `-J` for .xz compression
 7.  - `mkdir /tmp/arch/ ; tar -xvf /tmp/files/home.tar.xz -C /tmp/arch/`
     - note that we can use `Ctrl + a` to goto the start of the command line, and we can seperate commands using `;`
 ## <a name="lesson4"> Lesson 4
@@ -69,3 +70,9 @@ Working with Text Files
 4.  - `grep -R root /etc/ 2> /dev/null | cut -f 1 -d : | less`
 5.  - `grep -R '^...$' /etc/ 2> /dev/null |less`
 6.  - `grep -R 'alex$' /etc/ 2> /dev/null`
+## <a name="lesson5"> Lesson 5
+Connecting to a RHEL Server
+![lesson 5 task](./lesson5.png)
+1.  - `chvt 6`
+2.  - `chvt 1`
+3.  - `ssh root@localhost`
