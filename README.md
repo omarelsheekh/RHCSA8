@@ -9,6 +9,7 @@ The Red Hat Certified System Administrator (RHCSA), 3rd edition is all new and f
 ## Index
 - [lesson 2](#lesson2): Getting Started with Linux Commands
 - [lesson 3](#lesson3): Essential File Management Tasks 
+- [lesson 4](#lesson4): Working with Text Files
 ## <a name="lesson2"> Lesson 2
 Getting Started with Linux Commands  
 ![lesson 2 task](./lesson2.png)
@@ -59,3 +60,12 @@ Essential File Management Tasks
     - `-J` for .xz compressing
 7.  - `mkdir /tmp/arch/ ; tar -xvf /tmp/files/home.tar.xz -C /tmp/arch/`
     - note that we can use `Ctrl + a` to goto the start of the command line, and we can seperate commands using `;`
+## <a name="lesson4"> Lesson 4
+Working with Text Files
+![lesson 4 task](./lesson4.png)
+1.  - `head -n 5 /etc/passwd | tail -n 1`
+2.  - `sed -n 5p /etc/passwd`
+3.  - `ps aux | awk '{ print $NF }'`
+4.  - `grep -R root /etc/ 2> /dev/null | cut -f 1 -d : | less`
+5.  - `grep -R '^...$' /etc/ 2> /dev/null |less`
+6.  - `grep -R 'alex$' /etc/ 2> /dev/null`
