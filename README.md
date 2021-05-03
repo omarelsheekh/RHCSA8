@@ -12,6 +12,7 @@ The Red Hat Certified System Administrator (RHCSA), 3rd edition is all new and f
 - [lesson 4](#lesson4): Working with Text Files
 - [lesson 5](#lesson5): Connecting to a RHEL Server
 - [lesson 6](#lesson6): Managing Users and Groups
+- [lesson 7](#lesson7): Managing Permissions
 ## <a name="lesson2"> Lesson 2
 ![lesson 2 task](./lesson2.png)
 1.  - `mandb` update manual db
@@ -80,11 +81,18 @@ The Red Hat Certified System Administrator (RHCSA), 3rd edition is all new and f
     - `/etc/login.defs` and `/etc/default/useradd`
 2.  - `touch /etc/skel/newfile`
     - note that files in `/etc/skel/` dir will be created in user home upon creation
-3.  - `useradd anna`
-    - `useradd audrey`
-    - `useradd linda`
-    - `useradd lisa`
+3.  - to add user `useradd username`
 4.  - to change password `passwd username`
     - to lock password `passwd -l username`
 5.  - to add group `groupadd name`
     - to add user to a group `usermod -aG gname uname`
+## <a name="lesson7"> Lesson 7
+![lesson 7 task](./lesson7.png)
+1.  - `vim /home/linda/.bash_profile`
+    - add this line `umask 007`
+2.  - `mkdir /data/profs /data/students`
+    - `chmod 3770 /data/students`
+    - `chmod 3770 /data/profs`
+    - `chown anna:profs /data/profs`
+    - `chown anna:students /data/students`
+    - `setfacl -m d:g:profs:rx /data/students`
