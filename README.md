@@ -13,6 +13,7 @@ The Red Hat Certified System Administrator (RHCSA), 3rd edition is all new and f
 - [lesson 5](#lesson5): Connecting to a RHEL Server
 - [lesson 6](#lesson6): Managing Users and Groups
 - [lesson 7](#lesson7): Managing Permissions
+- [lesson 8](#lesson8): Configuring Networking
 ## <a name="lesson2"> Lesson 2
 ![lesson 2 task](./lesson2.png)
 1.  - `mandb` update manual db
@@ -96,3 +97,10 @@ The Red Hat Certified System Administrator (RHCSA), 3rd edition is all new and f
     - `chown anna:profs /data/profs`
     - `chown anna:students /data/students`
     - `setfacl -m d:g:profs:rx /data/students`
+## <a name="lesson8"> Lesson 8
+![lesson 8 task](./lesson8.png)
+-   you can do that using one of these option
+    - `nmcli` and make sure that `bash-completion` is installed
+    - `nmtui`
+    - you can edit existing connection or add and activate a new one
+    - or by editing config file `/etc/sysconfig/network-scripts/ifcfg-ens32`
