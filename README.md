@@ -14,6 +14,7 @@ The Red Hat Certified System Administrator (RHCSA), 3rd edition is all new and f
 - [lesson 6](#lesson6): Managing Users and Groups
 - [lesson 7](#lesson7): Managing Permissions
 - [lesson 8](#lesson8): Configuring Networking
+- [lesson 9](#lesson9): Managing Processes
 ## <a name="lesson2"> Lesson 2
 ![lesson 2 task](./lesson2.png)
 1.  - `mandb` update manual db
@@ -102,5 +103,21 @@ The Red Hat Certified System Administrator (RHCSA), 3rd edition is all new and f
 -   you can do that using one of these option
     - `nmcli` and make sure that `bash-completion` is installed
     - `nmtui`
-    - you can edit existing connection or add and activate a new one
+    - you can edit existing connection and reactivate it or add and activate a new one
     - or by editing config file `/etc/sysconfig/network-scripts/ifcfg-ens32`
+## <a name="lesson9"> Lesson 9
+![lesson 9 task](./lesson9.png)
+1.  - `Ctrl+Z` to pause process
+    - `bg` will move the most recent job to background
+    - `bg [job id]` will move the job to the background
+    - `fg`  will move the most recent job to foreground
+2.  - `command &` will run the command in the background
+3.  - `jobs` to list running jobs
+4.  - some usefull commands in top
+    - `h` for help
+    - `r` for renice
+    - `k` to kill processes
+5.  - `9` sig kill
+    - `15` sig terminate
+6.  - `killall -15 dd`
+    - install `psmisc` package if killall command not found
