@@ -15,6 +15,7 @@ The Red Hat Certified System Administrator (RHCSA), 3rd edition is all new and f
 - [lesson 7](#lesson7): Managing Permissions
 - [lesson 8](#lesson8): Configuring Networking
 - [lesson 9](#lesson9): Managing Processes
+- [lesson 10](#lesson10): Managing Software
 ## <a name="lesson2"> Lesson 2
 ![lesson 2 task](./lesson2.png)
 1.  - `mandb` update manual db
@@ -121,3 +122,13 @@ The Red Hat Certified System Administrator (RHCSA), 3rd edition is all new and f
     - `15` sig terminate
 6.  - `killall -15 dd`
     - install `psmisc` package if killall command not found
+## <a name="lesson10"> Lesson 10
+![lesson 10 task](./lesson10.png)
+-   - `ls /etc/yum.repos.d`
+    - you should see repos files there
+-   - `yum search sepolicy`
+    - `yum provides */sepolicy` for deeper search
+-   - `yum module list` to list all versions
+    - `yum module install php:7.1`
+-   - `yumdownloader httpd`
+    - `rpm -qp --scripts httpd-2.4....`
