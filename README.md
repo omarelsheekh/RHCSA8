@@ -16,6 +16,7 @@ The Red Hat Certified System Administrator (RHCSA), 3rd edition is all new and f
 - [lesson 8](#lesson8): Configuring Networking
 - [lesson 9](#lesson9): Managing Processes
 - [lesson 10](#lesson10): Managing Software
+- [lesson 11](#lesson11): Working with Systemd
 ## <a name="lesson2"> Lesson 2
 ![lesson 2 task](./lesson2.png)
 1.  - `mandb` update manual db
@@ -132,3 +133,10 @@ The Red Hat Certified System Administrator (RHCSA), 3rd edition is all new and f
     - `yum module install php:7.1`
 -   - `yumdownloader httpd`
     - `rpm -qp --scripts httpd-2.4....`
+## <a name="lesson11"> Lesson 11
+![lesson 11 task](./lesson11.png)
+-   - `systemctl enable httpd --now`
+-   - to list paramters `systemctl show httpd`
+    - set `Restart` to `always` and `RestartSec` to `60`
+    - `systemctl deamon-reload` to reload configrations
+    - `systemctl restart httpd` 
